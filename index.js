@@ -1,8 +1,15 @@
 function isPalindrome(word) {
+  var re = /[\W_]/g
+  var lowRegStr = word.toLowerCase().replace(re, '');
+  var reverseStr = lowRegStr.split('').reverse().join('');
+  return reverseStr === lowRegStr;
   // Write your algorithm here
 }
 
 /* 
+if word is equal to palindrome return true
+else
+return false
   Add your pseudocode here
 */
 
